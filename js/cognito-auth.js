@@ -95,7 +95,9 @@ var WildRydes = window.WildRydes || {};
 
     function createCognitoUser(email) {
         return new AmazonCognitoIdentity.CognitoUser({
-            Username: toUsername(email),
+            Username: email,
+            /*
+            Username: toUsername(email),*/
             Pool: userPool
         });
     }
